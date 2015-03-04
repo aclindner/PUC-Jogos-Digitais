@@ -10,5 +10,7 @@ int main() {
 	arara.SetSom("Aaaahhh aaaaaaaahh");
 	arara.SetPeso(400);
 
+	system("PAUSE");
+
 	return 0;
 }

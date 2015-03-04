@@ -4,7 +4,7 @@ Animal::Animal() {
 
 }
 
-Animal::Animal() {
+Animal::~Animal() {
 
 }
 

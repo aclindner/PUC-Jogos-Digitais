@@ -64,6 +64,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="Cao.h" />
+    <ClInclude Include="Galinha.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="Cao.cpp" />
+    <ClCompile Include="Galinha.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
