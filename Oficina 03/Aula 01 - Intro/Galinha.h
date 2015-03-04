@@ -2,7 +2,7 @@ using namespace std;
 
 #include "Animal.h"
 
-class Galinha : private Animal{
+class Galinha : public Animal{
 
 public:
 	Galinha();
