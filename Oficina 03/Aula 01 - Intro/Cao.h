@@ -10,6 +10,8 @@ public:
 	Cao();
 	~Cao();
 
+	string GetAttack();
+
 private:
 
 };

@@ -1,9 +1,13 @@
 #include "Galinha.h"
 
 Galinha::Galinha() {
-	SetSom("Po pô PÓ");
+	SetSom("Po po PO");
 }
 
 Galinha::~Galinha() {
 
+}
+
+string Galinha::GetAttack() {
+	return "Coro cocoooooooo";
 }

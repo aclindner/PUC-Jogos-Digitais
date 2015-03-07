@@ -12,6 +12,8 @@ public:
 	Galinha();
 	~Galinha();
 
+	string GetAttack();
+
 private:
 
 };

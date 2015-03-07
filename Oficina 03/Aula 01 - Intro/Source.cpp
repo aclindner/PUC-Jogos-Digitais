@@ -8,14 +8,13 @@ using namespace std;
 
 int main() {
 
-	Animal arara;
+	Galinha pintadinha;
 
-	arara.SetNome("Arara Rara");
-	arara.SetSom("Aaaahhh aaaaaaaahh");
-	arara.SetPeso(400);
+	pintadinha.SetNome("Galinha Pintadinha");
+	pintadinha.SetPeso(400);
 
-	cout << arara.GetSom() << endl;
-	arara.GetInfo();
+	cout << pintadinha.GetSom() << endl;
+	pintadinha.GetInfo();
 
 	system("PAUSE");
 

@@ -21,6 +21,8 @@ public:
 
 	void GetInfo();
 
+	virtual string GetAttack() = 0;
+
 private:
 	string nome;
 	string som;

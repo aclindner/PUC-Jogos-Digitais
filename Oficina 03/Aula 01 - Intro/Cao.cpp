@@ -7,3 +7,7 @@ Cao::Cao() {
 Cao::~Cao() {
 
 }
+
+string Cao::GetAttack() {
+	return "Rrrrrrrrrr Rouuuuff";
+}
