@@ -1,3 +1,6 @@
+using namespace std;
+
+#include <iostream>
 #include "Animal.h"
 
 Animal::Animal() {
@@ -29,5 +32,9 @@ void Animal::SetSom(string p_som) {
 }
 
 void Animal::SetPeso(int p_peso) {
-	peso = peso;
+	peso = p_peso;
+}
+
+void Animal::GetInfo() {
+	cout << "Nome: " << nome << "\nPeso: " << peso << " g" << endl;
 }

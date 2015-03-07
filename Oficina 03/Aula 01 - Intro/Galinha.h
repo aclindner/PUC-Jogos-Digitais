@@ -1,3 +1,7 @@
+#pragma once
+#ifndef _GALINHA_
+#define _GALINHA_
+
 using namespace std;
 
 #include "Animal.h"
@@ -11,3 +15,4 @@ public:
 private:
 
 };
+#endif

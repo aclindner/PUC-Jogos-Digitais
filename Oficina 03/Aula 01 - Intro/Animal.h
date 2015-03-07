@@ -1,3 +1,7 @@
+#pragma once
+#ifndef _ANIMAL_
+#define _ANIMAL_
+
 using namespace std;
 
 #include <string>
@@ -15,9 +19,12 @@ public:
 	void SetSom(string p_som);
 	void SetPeso(int p_peso);
 
+	void GetInfo();
+
 private:
 	string nome;
 	string som;
 	int peso;
 
 };
+#endif
