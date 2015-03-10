@@ -17,7 +17,7 @@ public:
 
 	~Array()
 	{
-		if (array != 0)
+		if (m_rray != 0)
 		{
 			delete[] m_array;
 		}
