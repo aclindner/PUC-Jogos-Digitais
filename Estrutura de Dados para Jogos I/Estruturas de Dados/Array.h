@@ -6,8 +6,6 @@ class Array
 {
 
 public:
-	T* m_array;
-	int m_size;
 	
 	Array( int p_size ) {
 
@@ -52,6 +50,32 @@ public:
 
 	}//Fim Resize( int p_size )
 
+	void Insert( T p_item, int p_index ) {
+		
+		int index;
+
+		for (index = m_size - 1; index > p_index; index--)
+			m_array[index] = m_array[index - 1];
+
+		m_array[p_index] = p_item;
+
+	}//Fim Insert( T p_item, int p_index )
+
+	void Remove( int p_index ) {
+
+		int index;
+
+		for ( index = p_index + 1; index < m_size; index++)
+			m_array[index - 1] = m_array[index];
+
+	}//Fim Remove( int p_index )
+
+	int Size() {
+
+		return m_size;
+
+	}//Fim Size()
+
 	T& operator[] ( int p_index ) {
 
 		return m_array[p_index];
@@ -66,6 +90,8 @@ public:
 
 private:
 
+	T* m_array;
+	int m_size;
 
 };
 
