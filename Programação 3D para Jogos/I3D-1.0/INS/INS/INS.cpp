@@ -51,7 +51,7 @@ void Inicializa()
 void Renderiza()
 {
 	float X,Y,Z;
-	int tam = 256;
+	int tam = 512;
 
    /*******************************************************************/
    /*Regula as Matrizes internas da OpenGl para orientacao dos objetos*/
@@ -86,8 +86,9 @@ void Renderiza()
    /******************************************/
     glPolygonMode(GL_FRONT, GL_LINE);
 	glPushMatrix();
-	glColor3f( 0.7f,0.7f,0.7f);
+	glColor3f( 0.8f,0.0f,0.0f);
 	glBegin(GL_QUADS);
+	
 	for ( int X = 0; X < tam; X++ )
 		   for (int Z = 0; Z < tam; Z++ )
 		   {
@@ -96,6 +97,7 @@ void Renderiza()
 			   glVertex3i (X + 1,0,Z + 1 );
 			   glVertex3i (X + 1,0,Z     );
 		   }
+
 	glEnd();
 	glPopMatrix();
 
