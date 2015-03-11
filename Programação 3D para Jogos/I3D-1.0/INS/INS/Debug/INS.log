@@ -1,0 +1,25 @@
+﻿Build started 10/03/2015 21:25:43.
+     1>Project "C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\INS\INS\INS.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\glut\glut-3.7.6-bin" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\INS.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\glut\glut-3.7.6-bin" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\INS.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt I3D_Camera.cpp I3D_Quaternion.cpp I3D_Tempo.cpp I3D_Vetor.cpp INS.cpp
+         INS.cpp
+         I3D_Vetor.cpp
+         I3D_Tempo.cpp
+         I3D_Quaternion.cpp
+         I3D_Camera.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\INS\Debug\INS.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\glut\glut-3.7.6-bin" glut32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\INS\Debug\INS.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\INS\Debug\INS.lib" /MACHINE:X86 Debug\I3D_Camera.obj
+         Debug\I3D_Quaternion.obj
+         Debug\I3D_Tempo.obj
+         Debug\I3D_Vetor.obj
+         Debug\INS.obj
+         Debug\stdafx.obj
+         INS.vcxproj -> C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\INS\Debug\INS.exe
+     1>Done Building Project "C:\Users\allison.lindner\Repos\Programação 3D para Jogos\I3D-1.0\INS\INS\INS.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.63
