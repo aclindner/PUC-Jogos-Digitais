@@ -70,4 +70,42 @@ public:
 	}
 };
 
+template <class T>
+class SListInterator {
+
+public:
+	SLinkedList<T> * m_list;
+	SListNode<T> * m_node;
+
+	SListInterator(SLinkedList<T> * p_list = 0 , SListNode<T> * p_node = 0) {
+
+		m_list = p_list;
+		m_node = p_node;
+	}
+
+	void Start() {
+
+		if (m_list != 0) {
+			
+			m_node = m_list->m_head;
+		}
+	}
+
+	void Forth() {
+
+		if (m_node != 0) {
+
+			m_node = m_node->m_next;
+		}
+	}
+
+	T& Item() {
+		return m_node->m_data;
+	}
+
+	bool Valid() {
+		return m_node != 0;
+	}
+};
+
 #endif
