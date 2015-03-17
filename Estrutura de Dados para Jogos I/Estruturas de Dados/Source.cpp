@@ -1,4 +1,5 @@
 #include "Array.h"
+#include "SLinkedList.h"
 #include <iostream>
 
 using namespace std;
@@ -12,6 +13,7 @@ void MostrarArrayInteiro(int* p_array, int tam) {
 
 int main()
 {
+	//Teste Array
 	Array<int> meuarray(5);
 	meuarray[0] = 99;
 	meuarray[1] = 88;
@@ -20,6 +22,10 @@ int main()
 	meuarray[4] = 55;
 
 	MostrarArrayInteiro(meuarray, 5);
+
+	//---------------------------------------------
+
+	
 
 	system("PAUSE");
 	return 0;

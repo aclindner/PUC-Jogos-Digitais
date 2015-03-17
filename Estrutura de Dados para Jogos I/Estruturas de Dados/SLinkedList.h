@@ -1,6 +1,10 @@
 #ifndef __SLINKEDLIST_H__
 #define __SLINKEDLIST_H__
 
+template <class T> class SListNode;
+template <class T> class SLinkedList;
+template <class T> class SListIterator;
+
 template <class T>
 class SListNode {
 
@@ -30,8 +34,8 @@ template <class T>
 class SLinkedList {
 
 public:
-	SListNode<T> * m_tail;
 	SListNode<T> * m_head;
+	SListNode<T> * m_tail;
 	int m_count;
 
 	SLinkedList() {
@@ -59,7 +63,7 @@ public:
 
 		if (m_head == 0)
 		{
-			m_head = m_tail = new SListNode();
+			m_head = m_tail = new SListNode<T>();
 			m_head->m_data = p_data;
 		}
 		else
@@ -69,7 +73,7 @@ public:
 		}
 	}
 
-	void Remove(SListInterator<T> & p_iterator) {
+	void Remove(SListIterator<T> & p_iterator) {
 
 		SListNode<T> * node = m_head;
 
@@ -140,7 +144,7 @@ public:
 
 	void Forth() {
 
-		if (m_node != 0) {
+		if (m_node != 0)
 			m_node = m_node->m_next;
 	}
 
