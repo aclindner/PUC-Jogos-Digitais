@@ -57,27 +57,76 @@ public:
 
 	void Append(T p_data) {
 
-		if (m_head == 0) {
-
+		if (m_head == 0)
+		{
 			m_head = m_tail = new SListNode();
 			m_head->m_data = p_data;
 		}
-		else {
-
+		else
+		{
 			m_tail->InsertAfter(p_data);
 			m_tail = m_tail->m_next;
+		}
+	}
+
+	void Remove(SListInterator<T> & p_iterator) {
+
+		SListNode<T> * node = m_head;
+
+		if (p_iterator.m_list != this)
+			return;
+
+		if (p_iterator.m_node == 0)
+			return;
+
+		if (p_iterator.m_node == m_head)
+		{
+			p_iterator.Forth();
+			RemoveHead();
+		}
+		else
+		{
+			while (node->m_next != p_iterator.m_node)
+				node = node->m_next;
+
+			p_iterator.Forth();
+
+			if (node->m_next == m_tail)
+				m_tail = node;
+
+			delete node->m_next;
+			node->m_next = p_iterator.m_node;
+		}
+
+		m_count--;
+	}
+
+	void RemoveHead() {
+
+		SListNode<T> * node = 0;
+
+		if (m_head != 0)
+		{
+			node = m_head->m_next;
+			delete m_head;
+			m_head = node;
+
+			if (m_head == 0)
+				m_tail = 0;
+
+			m_count--;
 		}
 	}
 };
 
 template <class T>
-class SListInterator {
+class SListIterator {
 
 public:
 	SLinkedList<T> * m_list;
 	SListNode<T> * m_node;
 
-	SListInterator(SLinkedList<T> * p_list = 0 , SListNode<T> * p_node = 0) {
+	SListIterator(SLinkedList<T> * p_list = 0 , SListNode<T> * p_node = 0) {
 
 		m_list = p_list;
 		m_node = p_node;
@@ -85,18 +134,14 @@ public:
 
 	void Start() {
 
-		if (m_list != 0) {
-			
+		if (m_list != 0) 
 			m_node = m_list->m_head;
-		}
 	}
 
 	void Forth() {
 
 		if (m_node != 0) {
-
 			m_node = m_node->m_next;
-		}
 	}
 
 	T& Item() {

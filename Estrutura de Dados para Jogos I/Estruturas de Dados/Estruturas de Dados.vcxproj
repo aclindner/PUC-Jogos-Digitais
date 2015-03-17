@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="SLinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
