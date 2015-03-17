@@ -54,6 +54,20 @@ public:
 			itr = mext;
 		}
 	}
+
+	void Append(T p_data) {
+
+		if (m_head == 0) {
+
+			m_head = m_tail = new SListNode();
+			m_head->m_data = p_data;
+		}
+		else {
+
+			m_tail->InsertAfter(p_data);
+			m_tail = m_tail->m_next;
+		}
+	}
 };
 
 #endif
