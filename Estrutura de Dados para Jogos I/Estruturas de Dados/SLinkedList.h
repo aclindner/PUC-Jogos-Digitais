@@ -9,6 +9,7 @@ public:
 	SListNode<T> * m_next;
 
 	SListNode() {
+
 		m_next = 0;
 	}
 
@@ -22,10 +23,37 @@ public:
 		new_node->m_next = m_next;
 
 		m_next = new_node;
+	}
+};
 
+template <class T>
+class SLinkedList {
+
+public:
+	SListNode<T> * m_tail;
+	SListNode<T> * m_head;
+	int m_count;
+
+	SLinkedList() {
+
+		m_tail = 0;
+		m_head = 0;
+		m_count = 0;
 	}
 
+	~SLinkedList() {
 
+		SListNode<T> * itr;
+		itr = m_head;
+		SListNode<T> * next;
+
+		while (itr != 0) {
+
+			next = itr->m_next;
+			delete itr;
+			itr = mext;
+		}
+	}
 };
 
 #endif
