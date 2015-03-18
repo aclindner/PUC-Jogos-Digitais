@@ -1,5 +1,7 @@
 #include "GameManager.h"
 
+GameManager * GameManager::game_manager = nullptr;
+
 GameManager::GameManager(){
 	this->value = 0;
 }

@@ -6,10 +6,10 @@ private:
 	int value;
 	static GameManager * game_manager;
 
-public:
 	GameManager();
 	~GameManager();
 
+public:
 	static GameManager * getInstance();
 
 	void setValue(int value);

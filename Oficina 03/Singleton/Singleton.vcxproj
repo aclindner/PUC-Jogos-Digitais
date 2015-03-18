@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0F6852F5-8BF8-4601-BEA0-06FB68707065}</ProjectGuid>
-    <RootNamespace>SingletoneObserver</RootNamespace>
+    <ProjectGuid>{A5EC119F-A587-4DA2-AF91-53D11B557592}</ProjectGuid>
+    <RootNamespace>Singleton</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -67,6 +67,7 @@
     <ClInclude Include="GameManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
