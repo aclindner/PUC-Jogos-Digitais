@@ -1,4 +1,5 @@
 #include "SDL.h"
+#include <iostream>
 
 int main(int argc, char** argv) {
 
@@ -11,7 +12,24 @@ int main(int argc, char** argv) {
 								800, 600,
 								SDL_WINDOW_SHOWN);
 
+	SDL_Event e;
+	bool quitGame = false;
+	while (!quitGame) {
+		
+		SDL_PollEvent(&e);
 
-	system("PAUSE");
+		switch (e.type) {
+
+			case SDL_QUIT:
+				quitGame = true;
+				break;
+			case SDL_MOUSEMOTION:
+				std::cout << e.motion.x << " " << e.motion.y << std::endl;
+				break;
+			default:
+				break;
+		}
+	}
+
 	return 0;
 }
