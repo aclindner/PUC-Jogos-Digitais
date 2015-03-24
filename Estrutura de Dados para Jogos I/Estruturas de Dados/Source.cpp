@@ -37,6 +37,18 @@ int main()
 	
 	//Do começo ao Fim
 	showFromBegin(node2);
+
+	SLinkedList<int> * lista = new SLinkedList<int>();
+
+	lista->Append(10);
+	lista->Append(20);
+	lista->Append(30);
+
+	showFromBegin(lista->m_head);
+
+	lista->Prepend(0);
+
+	showFromBegin(lista->m_head);
 	
 	system("PAUSE");
 	return 0;

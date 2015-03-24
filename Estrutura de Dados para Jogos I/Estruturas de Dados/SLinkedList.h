@@ -47,9 +47,9 @@ public:
 
 	~SLinkedList() {
 
-		SListNode<T> * itr;
+		SListNode< T > * itr;
 		itr = m_head;
-		SListNode<T> * next;
+		SListNode< T > * next;
 
 		while (itr != 0) {
 
@@ -59,11 +59,24 @@ public:
 		}
 	}
 
+	void Prepend(T p_data) {
+		SListNode<T> * new_node;
+		new_node = new SListNode < T > ;
+		new_node->m_data = p_data;
+		new_node->m_next = m_head;
+		m_head = new_node;
+
+		if (m_tail == 0)
+			m_tail = m_head;
+
+		m_count++;
+	}
+
 	void Append(T p_data) {
 
 		if (m_head == 0)
 		{
-			m_head = m_tail = new SListNode<T>();
+			m_head = m_tail = new SListNode< T >();
 			m_head->m_data = p_data;
 		}
 		else
@@ -120,6 +133,29 @@ public:
 
 			m_count--;
 		}
+	}
+
+	void RemoveTail() {
+
+		SListNode<T> * node = m_head;
+
+		if (m_head != 0) {
+			if (m_head == m_tail) {
+				delete m_head;
+				m_head = m_tail = 0;
+			}
+		}
+		else {
+			while (node->m_next != m_tail) {
+				node = node->m_next;
+			}
+
+			m_tail = node;
+			delete node->m_next;
+			node->m_next = 0;
+		}
+
+		m_count--;
 	}
 };
 
