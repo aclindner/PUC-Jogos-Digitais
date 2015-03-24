@@ -49,6 +49,12 @@ int main()
 	lista->Prepend(0);
 
 	showFromBegin(lista->m_head);
+
+	SListIterator<int> itr2 = lista->GetIterator();
+
+	for (itr2.Start(); itr2.Valid(); itr2.Forth()) {
+		std::cout << itr2.Item() << std::endl;
+	}
 	
 	system("PAUSE");
 	return 0;

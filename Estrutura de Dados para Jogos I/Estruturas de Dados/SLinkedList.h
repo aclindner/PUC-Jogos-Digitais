@@ -157,6 +157,10 @@ public:
 
 		m_count--;
 	}
+
+	SListIterator<T> GetIterator() {
+		return SListIterator<T>(this, m_head);
+	}
 };
 
 template <class T>
