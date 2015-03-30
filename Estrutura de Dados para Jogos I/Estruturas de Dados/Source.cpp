@@ -1,5 +1,6 @@
 #include "Array.h"
 #include "SLinkedList.h"
+#include "DLinkedList.h"
 #include <iostream>
 
 using namespace std;
