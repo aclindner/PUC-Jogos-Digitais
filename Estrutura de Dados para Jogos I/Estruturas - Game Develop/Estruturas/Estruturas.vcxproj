@@ -65,7 +65,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="AStack.h" />
     <ClInclude Include="DLinkedList.h" />
+    <ClInclude Include="LQueue.h" />
     <ClInclude Include="LStack.h" />
   </ItemGroup>
   <ItemGroup>

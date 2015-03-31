@@ -19,6 +19,10 @@ public:
 	T Top() {
 		return m_tail->m_data;
 	}
+
+	int Count() {
+		return m_count;
+	}
 };
 
 #endif

@@ -24,6 +24,12 @@
     <ClInclude Include="LStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
