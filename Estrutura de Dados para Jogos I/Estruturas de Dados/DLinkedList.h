@@ -98,6 +98,36 @@ public:
 		}
 	}
 
+	void Remove(DListIterator<T> & p_iterator) {
+
+		DListNode<T> * node = m_head;
+
+		if (p_iterator.m_list != this)
+			return;
+
+		if (p_iterator.m_node == 0)
+			return;
+
+		if (p_iterator.m_node == m_head)
+		{
+			p_iterator.Forth();
+			RemoveHead();
+		}
+		else if (p_iterator.m_node == m_tail)
+		{
+			p_iterator.Back();
+			RemoveTail();
+		}
+		else {
+			p_iterator.m_node->m_previous->m_next = p_iterator.m_node->m_next;
+			p_iterator.m_node->m_next->m_previous = p_iterator.m_node->m_next;
+			delete p_iterator.m_node;
+			p_iterator.Forth;
+		}
+
+		m_count--;
+	}
+
 	void RemoveHead() {
 
 		DListNode<T> * node = 0;
@@ -130,6 +160,10 @@ public:
 
 			m_count--;
 		}
+	}
+
+	DListIterator<T> GetIterator() {
+		return DListIterator<T>(this, m_head);
 	}
 };
 
